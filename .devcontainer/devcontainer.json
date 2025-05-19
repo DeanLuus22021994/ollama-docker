@@ -1,8 +1,13 @@
 {
   "name": "ollama-docker",
-  "dockerComposeFile": ["../docker-compose.yml"],
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
   "service": "app",
   "workspaceFolder": "/code",
+  "hostRequirements": {
+    "gpu": "optional"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -34,7 +39,9 @@
         "python.pythonPath": "/usr/local/bin/python",
         "python.linting.pylintEnabled": false,
         "python.linting.flake8Enabled": true,
-        "python.linting.flake8Args": ["--max-line-length=88"],
+        "python.linting.flake8Args": [
+          "--max-line-length=88"
+        ],
         "python.formatting.provider": "ms-python.python",
         "editor.formatOnSave": true
       }
